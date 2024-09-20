@@ -24,7 +24,6 @@ app.get("/", function (req, res) {
   res.sendFile(__dirname + '/views/index.html');
 });
 
-
 // your first API endpoint... 
 app.get("/api/:date", function (req, res) {
   let { date } = req.params;
@@ -54,8 +53,6 @@ app.get("/api", (req, res) => {
     utc: new Date().toUTCString()
   })
 })
-
-
 
 // Listen on port set in environment variable or default to 3000
 var listener = app.listen(process.env.PORT || 3000, function () {
